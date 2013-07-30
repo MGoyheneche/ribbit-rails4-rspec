@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 	before_save :create_avatar_url
 	before_validation :prep_email
 
+	has_many :ribbits
+
 
 	# attr_accessible :avatar_url, :email, :name, :password, :password_confirmation, :username
 	has_secure_password
